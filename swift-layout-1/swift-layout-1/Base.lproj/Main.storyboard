@@ -22,13 +22,13 @@
                                 <rect key="frame" x="207" y="671" width="207" height="65"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-ZW-3ul">
-                                        <rect key="frame" x="74" y="18" width="58" height="30"/>
-                                        <state key="normal" title="SIGNUP">
+                                        <rect key="frame" x="72" y="18" width="62" height="30"/>
+                                        <state key="normal" title="SIGN UP">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="4d5-9f-k4w" kind="show" identifier="signup_view" id="1EX-Dq-XkD"/>
+                                            <segue destination="D6L-gA-Nbq" kind="show" identifier="signup_view" id="DAr-vt-blk"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -44,23 +44,23 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6n-Qc-m1V">
                                 <rect key="frame" x="0.0" y="671" width="207" height="65"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-rg-Js0">
-                                        <rect key="frame" x="80" y="18" width="41" height="30"/>
-                                        <state key="normal" title="SIGIN">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgd-4u-tfq">
+                                        <rect key="frame" x="75" y="18" width="56" height="30"/>
+                                        <state key="normal" title="SIGN IN">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="D6L-gA-Nbq" kind="show" id="OZt-Gw-kwV"/>
+                                            <segue destination="D6L-gA-Nbq" kind="show" identifier="signin_view" id="e9M-uW-AS0"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13681780958676987" green="0.3497061482228096" blue="0.73542061237373735" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerY" secondItem="G0u-rg-Js0" secondAttribute="centerY" id="SEp-7L-Qfb"/>
+                                    <constraint firstAttribute="centerX" secondItem="wgd-4u-tfq" secondAttribute="centerX" constant="0.5" id="Asq-Pa-wWq"/>
+                                    <constraint firstAttribute="centerY" secondItem="wgd-4u-tfq" secondAttribute="centerY" constant="-0.5" id="JrI-IX-3rI"/>
                                     <constraint firstAttribute="height" constant="65" id="X9O-8B-kDB"/>
                                     <constraint firstAttribute="width" secondItem="t6n-Qc-m1V" secondAttribute="height" multiplier="207:65" id="XGo-Rc-s7u"/>
-                                    <constraint firstAttribute="centerX" secondItem="G0u-rg-Js0" secondAttribute="centerX" constant="3" id="Yve-yj-gyI"/>
                                     <constraint firstAttribute="width" constant="207" id="fhk-EZ-hwf"/>
                                 </constraints>
                             </view>
@@ -83,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="717" y="277"/>
         </scene>
-        <!--SIGIN-->
+        <!--Other View Controller-->
         <scene sceneID="fiC-hm-a7h">
             <objects>
-                <viewController id="D6L-gA-Nbq" sceneMemberID="viewController">
+                <viewController id="D6L-gA-Nbq" customClass="OtherViewController" customModule="swift_layout_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JgJ-1b-cCJ"/>
                         <viewControllerLayoutGuide type="bottom" id="Hdr-uf-Kar"/>
@@ -94,34 +94,30 @@
                     <view key="view" contentMode="scaleToFill" id="wQS-Ao-5VF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clP-cO-bp8">
+                                <rect key="frame" x="16" y="109" width="382" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="clP-cO-bp8" secondAttribute="trailing" id="0st-nA-Edz"/>
+                            <constraint firstItem="clP-cO-bp8" firstAttribute="top" secondItem="JgJ-1b-cCJ" secondAttribute="bottom" constant="45" id="Thz-h6-1Pu"/>
+                            <constraint firstItem="clP-cO-bp8" firstAttribute="leading" secondItem="wQS-Ao-5VF" secondAttribute="leadingMargin" id="nT8-Ju-kFD"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="SIGIN" id="geu-rs-qsM"/>
+                    <navigationItem key="navigationItem" id="geu-rs-qsM"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="counterLabel" destination="clP-cO-bp8" id="7QE-m2-P9E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ztb-9m-xur" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1242" y="715"/>
-        </scene>
-        <!--SIGNUP-->
-        <scene sceneID="9DY-4h-OMU">
-            <objects>
-                <viewController id="4d5-9f-k4w" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MAG-ng-jmx"/>
-                        <viewControllerLayoutGuide type="bottom" id="LW4-n3-Ib1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Yj-ai-QKh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="SIGNUP" id="Vfv-dw-dpd"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-wP-ZWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1242" y="-93"/>
+            <point key="canvasLocation" x="1208" y="277"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6y8-pQ-IC5">
@@ -143,4 +139,7 @@
             <point key="canvasLocation" x="245" y="277"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="e9M-uW-AS0"/>
+    </inferredMetricsTieBreakers>
 </document>
