@@ -1,25 +1,146 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="T1O-JE-ZKz">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="swift_layout_1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9H-AE-OTz">
+                                <rect key="frame" x="207" y="671" width="207" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WB-ZW-3ul">
+                                        <rect key="frame" x="74" y="18" width="58" height="30"/>
+                                        <state key="normal" title="SIGNUP">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="4d5-9f-k4w" kind="show" identifier="signup_view" id="1EX-Dq-XkD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.26110896397899797" green="0.46685917435047508" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="207" id="7hK-EO-cNJ"/>
+                                    <constraint firstAttribute="height" constant="65" id="Ehl-MV-bzK"/>
+                                    <constraint firstAttribute="centerX" secondItem="6WB-ZW-3ul" secondAttribute="centerX" constant="0.5" id="N5A-Qu-SAb"/>
+                                    <constraint firstAttribute="width" secondItem="H9H-AE-OTz" secondAttribute="height" multiplier="207:65" id="fgW-bP-lW4"/>
+                                    <constraint firstAttribute="centerY" secondItem="6WB-ZW-3ul" secondAttribute="centerY" constant="-0.5" id="h5D-6Q-5gl"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t6n-Qc-m1V">
+                                <rect key="frame" x="0.0" y="671" width="207" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0u-rg-Js0">
+                                        <rect key="frame" x="80" y="18" width="41" height="30"/>
+                                        <state key="normal" title="SIGIN">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="D6L-gA-Nbq" kind="show" id="OZt-Gw-kwV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13681780958676987" green="0.3497061482228096" blue="0.73542061237373735" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="G0u-rg-Js0" secondAttribute="centerY" id="SEp-7L-Qfb"/>
+                                    <constraint firstAttribute="height" constant="65" id="X9O-8B-kDB"/>
+                                    <constraint firstAttribute="width" secondItem="t6n-Qc-m1V" secondAttribute="height" multiplier="207:65" id="XGo-Rc-s7u"/>
+                                    <constraint firstAttribute="centerX" secondItem="G0u-rg-Js0" secondAttribute="centerX" constant="3" id="Yve-yj-gyI"/>
+                                    <constraint firstAttribute="width" constant="207" id="fhk-EZ-hwf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t6n-Qc-m1V" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="-16" id="1vu-gb-BXm"/>
+                            <constraint firstItem="t6n-Qc-m1V" firstAttribute="height" secondItem="H9H-AE-OTz" secondAttribute="height" id="RdR-58-nMZ"/>
+                            <constraint firstItem="t6n-Qc-m1V" firstAttribute="width" secondItem="H9H-AE-OTz" secondAttribute="width" id="Uux-jZ-yKJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H9H-AE-OTz" secondAttribute="trailing" constant="-16" id="ex3-gc-8Lh"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="t6n-Qc-m1V" secondAttribute="bottom" id="gmQ-iz-4fY"/>
+                            <constraint firstItem="H9H-AE-OTz" firstAttribute="leading" secondItem="t6n-Qc-m1V" secondAttribute="trailing" id="kdi-gO-YJu"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="H9H-AE-OTz" secondAttribute="bottom" id="vz4-xt-XR2"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="3Qe-aF-oXU"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="717" y="277"/>
+        </scene>
+        <!--SIGIN-->
+        <scene sceneID="fiC-hm-a7h">
+            <objects>
+                <viewController id="D6L-gA-Nbq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JgJ-1b-cCJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Hdr-uf-Kar"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wQS-Ao-5VF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SIGIN" id="geu-rs-qsM"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ztb-9m-xur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="715"/>
+        </scene>
+        <!--SIGNUP-->
+        <scene sceneID="9DY-4h-OMU">
+            <objects>
+                <viewController id="4d5-9f-k4w" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MAG-ng-jmx"/>
+                        <viewControllerLayoutGuide type="bottom" id="LW4-n3-Ib1"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3Yj-ai-QKh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="SIGNUP" id="Vfv-dw-dpd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5TF-wP-ZWG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1242" y="-93"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6y8-pQ-IC5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="T1O-JE-ZKz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qpz-xK-LhP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="iWV-rQ-ywk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zje-rs-h3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="277"/>
         </scene>
     </scenes>
 </document>
