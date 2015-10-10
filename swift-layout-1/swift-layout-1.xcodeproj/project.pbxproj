@@ -159,6 +159,7 @@
 		DDEDCC5C1BA4373500B36157 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Elad Rahmim";
 				TargetAttributes = {
@@ -413,6 +414,7 @@
 				DDEDCC851BA4373500B36157 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DDEDCC861BA4373500B36157 /* Build configuration list for PBXNativeTarget "swift-layout-1Tests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +423,7 @@
 				DDEDCC881BA4373500B36157 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
